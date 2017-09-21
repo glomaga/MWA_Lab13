@@ -13,7 +13,7 @@ import { Observable } from "rxjs/Rx";
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.css']
 })
-export class ProfileComponent implements OnInit {
+export class ProfileComponent {
 
   //done = false;
 
@@ -37,7 +37,7 @@ export class ProfileComponent implements OnInit {
   console.log(this.items);
    }
 
-  ngOnInit() {
+   ngOnDestroy() {
     this.subscription.unsubscribe();
   }
 
